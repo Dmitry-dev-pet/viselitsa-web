@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Виселица</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <p class="eyebrow">Игра</p>
+      <h1>Виселица</h1>
+      <p class="lead">Угадайте русское слово, пока фигура не собрана.</p>
+    </header>
+    <section class="board">
+      <svg class="gallows" viewBox="0 0 220 260" aria-hidden="true">
+        <line x1="20" y1="240" x2="160" y2="240" />
+        <line x1="50" y1="240" x2="50" y2="20" />
+        <line x1="50" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <circle class="part" data-part="0" cx="140" cy="70" r="20" />
+        <line class="part" data-part="1" x1="140" y1="90" x2="140" y2="150" />
+        <line class="part" data-part="2" x1="140" y1="110" x2="110" y2="135" />
+        <line class="part" data-part="3" x1="140" y1="110" x2="170" y2="135" />
+        <line class="part" data-part="4" x1="140" y1="150" x2="118" y2="200" />
+        <line class="part" data-part="5" x1="140" y1="150" x2="162" y2="200" />
+      </svg>
+      <div class="play">
+        <p class="category" id="category">категория</p>
+        <p class="word" id="word" aria-live="polite"></p>
+        <p class="status" id="status">Осталось ошибок: 6</p>
+        <div class="keyboard" id="keyboard"></div>
+        <button class="again" id="again" type="button">Новая игра</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

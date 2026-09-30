@@ -1,2 +1,5 @@
-# viselitsa-web
-Публичная веб-игра «Виселица» для GitHub Pages
+# Виселица
+
+Публичная веб-игра.
+
+Сайт: https://dmitry-dev-pet.github.io/viselitsa-web/

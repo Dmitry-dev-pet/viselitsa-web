@@ -1,0 +1,42 @@
+:root {
+  --bg: #11140f;
+  --panel: #1b2118;
+  --ink: #f4efe4;
+  --muted: #b7b09f;
+  --line: #d7c39a;
+  --ok: #8fbf6a;
+  --bad: #d37a5a;
+  --key: #2a3226;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: radial-gradient(circle at top, #2a3324 0%, var(--bg) 46%);
+  color: var(--ink);
+}
+.app { max-width: 920px; margin: 0 auto; padding: 32px 20px 48px; }
+.eyebrow { letter-spacing: 0.18em; text-transform: uppercase; font-size: 12px; color: var(--muted); margin: 0 0 8px; }
+h1 { font-size: clamp(36px, 6vw, 64px); margin: 0; font-weight: 500; }
+.lead { color: var(--muted); max-width: 36em; }
+.board {
+  margin-top: 28px; display: grid; grid-template-columns: 240px 1fr; gap: 28px;
+  background: color-mix(in srgb, var(--panel) 88%, black);
+  border: 1px solid #3a4433; border-radius: 24px; padding: 28px;
+}
+.gallows { width: 100%; stroke: var(--line); stroke-width: 6; stroke-linecap: round; fill: none; }
+.part { opacity: 0; }
+.part.visible { opacity: 1; }
+.category { margin: 0 0 10px; color: var(--muted); text-transform: lowercase; }
+.word { font-size: clamp(28px, 5vw, 44px); letter-spacing: 0.18em; margin: 0 0 12px; min-height: 1.3em; }
+.status { color: var(--muted); }
+.status.win { color: var(--ok); }
+.status.lose { color: var(--bad); }
+.keyboard { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.key { width: 42px; height: 42px; border: 0; border-radius: 10px; background: var(--key); color: var(--ink); font: inherit; cursor: pointer; }
+.key:hover:not(:disabled) { filter: brightness(1.15); }
+.key.hit { background: #35502a; color: var(--ok); }
+.key.miss { background: #4a2d24; color: var(--bad); }
+.key:disabled { cursor: default; opacity: 0.7; }
+.again { margin-top: 22px; border: 0; border-radius: 999px; padding: 12px 22px; background: var(--line); color: #1a170f; font: inherit; cursor: pointer; }
+@media (max-width: 720px) { .board { grid-template-columns: 1fr; } .gallows { max-width: 220px; } }
